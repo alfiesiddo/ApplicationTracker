@@ -8,25 +8,26 @@
             Text="Company Name:"
             VerticalOptions="Center" 
             HorizontalOptions="Center" />
-        <Entry Placeholder="CompanyName" x:Name="NameEntry" />
+        <Entry Placeholder="CompanyName" x:Name="companyName" VerticalOptions="Center"  />
 
         <Label 
             Text="Salary:"
             VerticalOptions="Center" 
             HorizontalOptions="Center" />
-        <Entry Placeholder="Salary" x:Name="NameEntry" />
+        <Entry Placeholder="Salary" x:Name="salary"  VerticalOptions="Center" />
         
         <Label 
             Text="Location:"
             VerticalOptions="Center" 
             HorizontalOptions="Center" />
-        <Entry Placeholder="Location" x:Name="NameEntry" />
+        <Entry Placeholder="Location" x:Name="location" VerticalOptions="Center"  />
         
         <Label 
             Text="Role:"
             VerticalOptions="Center" 
             HorizontalOptions="Center" />
-        <Entry Placeholder="Role" x:Name="NameEntry" />
+        <Entry Placeholder="Role" x:Name="role" VerticalOptions="Center"  />
+        <Button Text="Add Application"></Button>
 
     </VerticalStackLayout>
 </ContentPage>
