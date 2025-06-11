@@ -10,12 +10,10 @@
     <TabBar>
         <ShellContent 
             Title="Home" 
-            Icon="home.png" 
             ContentTemplate="{DataTemplate local:MainPage}" />
 
         <ShellContent 
             Title="Add Application" 
-            Icon="list.png" 
             ContentTemplate="{DataTemplate local:AddApplicationsPage}" />
     </TabBar>
 

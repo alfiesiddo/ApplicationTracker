@@ -27,7 +27,7 @@
             VerticalOptions="Center" 
             HorizontalOptions="Center" />
         <Entry Placeholder="Role" x:Name="role" VerticalOptions="Center"  />
-        <Button Text="Add Application" Clicked="AddApplicationButtonPressed"></Button>
+        <Button Text="Add Application"></Button>
 
     </VerticalStackLayout>
 </ContentPage>
