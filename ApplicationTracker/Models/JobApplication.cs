@@ -16,6 +16,6 @@ namespace ApplicationTracker.Data
         public string CompanyName { get; set; }
         public string Location { get; set; }
 
-        int Status { get; set; } = 0;
+        public int Status { get; set; } = 0;
     }
 }
