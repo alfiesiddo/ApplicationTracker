@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ApplicationTracker.AddApplicationsPage"
+             Title="AddApplicationsPage">
+    <VerticalStackLayout>
+        <Label 
+            Text="Company Name:"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center" />
+        <Entry Placeholder="CompanyName" x:Name="NameEntry" />
+
+        <Label 
+            Text="Salary:"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center" />
+        <Entry Placeholder="Salary" x:Name="NameEntry" />
+        
+        <Label 
+            Text="Location:"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center" />
+        <Entry Placeholder="Location" x:Name="NameEntry" />
+        
+        <Label 
+            Text="Role:"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center" />
+        <Entry Placeholder="Role" x:Name="NameEntry" />
+
+    </VerticalStackLayout>
+</ContentPage>
