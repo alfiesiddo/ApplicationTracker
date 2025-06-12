@@ -50,10 +50,10 @@
                                     <Picker.ItemsSource>
                                         <x:Array Type="{x:Type x:String}">
                                             <x:String>Applied</x:String>
-                                            <x:String>Interviewing</x:String>
-                                            <x:String>Offer</x:String>
+                                            <x:String>Assessments</x:String>
+                                            <x:String>Interview</x:String>
+                                            <x:String>Offered</x:String>
                                             <x:String>Rejected</x:String>
-                                            <x:String>Withdrawn</x:String>
                                         </x:Array>
                                     </Picker.ItemsSource>
                                 </Picker>
