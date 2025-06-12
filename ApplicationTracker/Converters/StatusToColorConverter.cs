@@ -17,7 +17,7 @@ namespace ApplicationTracker.Converters
             switch (status)
             {
                 case 0: // Applied
-                    return Colors.WhiteSmoke;
+                    return Colors.Gray;
                 case 1: // Assessments
                     return Colors.SandyBrown;
                 case 2: // Interviewing
