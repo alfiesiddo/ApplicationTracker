@@ -8,13 +8,22 @@
     Title="ApplicationTracker">
 
     <TabBar>
-        <ShellContent 
-            Title="Home" 
-            ContentTemplate="{DataTemplate local:MainPage}" />
+        <Tab Title="Home" Icon="home.svg">
+            <ShellContent
+                Title="Home"
+                ContentTemplate="{DataTemplate local:MainPage}"
+                Route="MainPage" />
+        </Tab>
 
-        <ShellContent 
-            Title="Add Application" 
-            ContentTemplate="{DataTemplate local:AddApplicationsPage}" />
+        <!-- FIXES ARE HERE -->
+        <Tab Title="Add Application" Icon="add.svg">
+            <!-- Changed title to be more descriptive -->
+            <ShellContent
+                Title="Add Application"
+                ContentTemplate="{DataTemplate local:AddApplicationsPage}"
+                Route="AddApplicationsPage" />
+            <!-- Gave it a new, unique route -->
+        </Tab>
     </TabBar>
 
 </Shell>

@@ -3,21 +3,45 @@ using ApplicationTracker.Data;
 
 public partial class AddApplicationsPage : ContentPage
 {
-	DatabaseHelper Database = new DatabaseHelper();
-	public AddApplicationsPage()
-	{
-		InitializeComponent();
-	}
-    private  void AddApplicationButtonPressed(object sender, EventArgs e)
+    DatabaseHelper database;
+
+    public AddApplicationsPage()
     {
-        JobApplication jobApplication = new JobApplication();
-        jobApplication.CompanyName = companyName.Text;
-        jobApplication.Salary = salary.Text;
-        jobApplication.Location = location.Text;
-        jobApplication.Role = role.Text;
-        jobApplication.Status = 0; //default for newly applied
+        InitializeComponent();
+        
+    }
 
-        Database.AddJobApplicationAsync(jobApplication);
+    // 2. Make the event handler async so we can use 'await'.
+    private async void AddApplicationButtonPressed(object sender, EventArgs e)
+    {
+  
+        database = new DatabaseHelper();
 
+        // Basic validation to prevent crashing on empty entries
+        if (string.IsNullOrWhiteSpace(companyName.Text) ||
+            string.IsNullOrWhiteSpace(role.Text))
+        {
+            await DisplayAlert("Error", "Company Name and Role are required.", "OK");
+            return;
+        }
+
+        JobApplication jobApplication = new JobApplication
+        {
+            CompanyName = companyName.Text,
+            Salary = salary.Text,
+            Location = location.Text,
+            Role = role.Text,
+            Status = 0 //default for newly applied
+        };
+
+        await database.AddJobApplicationAsync(jobApplication);
+
+        // Give user feedback and clear the form
+        await DisplayAlert("Success", "Application Saved!", "OK");
+
+        companyName.Text = string.Empty;
+        salary.Text = string.Empty;
+        location.Text = string.Empty;
+        role.Text = string.Empty;
     }
 }

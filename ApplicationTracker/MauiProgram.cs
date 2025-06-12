@@ -18,6 +18,7 @@ namespace ApplicationTracker
 #if DEBUG
     		builder.Logging.AddDebug();
 #endif
+            SQLitePCL.Batteries_V2.Init();
 
             return builder.Build();
         }

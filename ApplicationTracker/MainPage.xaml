@@ -1,13 +1,54 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="ApplicationTracker.MainPage">
+             x:Class="ApplicationTracker.MainPage"
+             Title="My Applications">
 
-    <ScrollView>
-        <VerticalStackLayout
-            Padding="30,0"
-            Spacing="25">
-        </VerticalStackLayout>
-    </ScrollView>
+    <Grid RowDefinitions="Auto, *" Padding="10">
 
+        <Label Grid.Row="0"
+               Text="Saved Applications"
+               FontSize="Large"
+               FontAttributes="Bold"
+               HorizontalOptions="Center" 
+               Margin="0,0,0,10"/>
+
+        <CollectionView Grid.Row="1"
+                        ItemsSource="{Binding JobApplications}"
+                        SelectionMode="None">
+
+            <CollectionView.EmptyView>
+                <StackLayout Padding="50">
+                    <Label Text="No applications saved yet." HorizontalOptions="Center" />
+                    <Label Text="Go to the 'Add Application' tab to get started!" HorizontalOptions="Center" />
+                </StackLayout>
+            </CollectionView.EmptyView>
+
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <!-- This is the "Panel" for each application -->
+                    <Frame Margin="10" Padding="15" BorderColor="LightGray" CornerRadius="8" HasShadow="True">
+                        <Grid RowDefinitions="Auto, Auto, Auto" ColumnDefinitions="*, Auto" RowSpacing="5">
+
+                            <Label Grid.Row="0" Grid.Column="0" FontSize="Medium" FontAttributes="Bold">
+                                <Label.FormattedText>
+                                    <FormattedString>
+                                        <Span Text="{Binding Role}" />
+                                        <Span Text=" at " />
+                                        <Span Text="{Binding CompanyName}" />
+                                    </FormattedString>
+                                </Label.FormattedText>
+                            </Label>
+
+                            <Label Grid.Row="1" Grid.Column="0" Text="{Binding Location}" FontAttributes="Italic" />
+                            <Label Grid.Row="2" Grid.Column="0" Text="{Binding Salary}" TextColor="Green" />
+
+                            <!-- You can add a status icon or text here later -->
+
+                        </Grid>
+                    </Frame>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+    </Grid>
 </ContentPage>

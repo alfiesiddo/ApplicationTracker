@@ -3,31 +3,27 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="ApplicationTracker.AddApplicationsPage"
              Title="AddApplicationsPage">
-    <VerticalStackLayout>
+    <VerticalStackLayout Spacing="10" Padding="20">
         <Label 
-            Text="Company Name:"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
-        <Entry Placeholder="CompanyName" x:Name="companyName" VerticalOptions="Center"  />
+            Text="Company Name:" />
+        <Entry Placeholder="e.g., Microsoft" x:Name="companyName" />
 
         <Label 
-            Text="Salary:"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
-        <Entry Placeholder="Salary" x:Name="salary"  VerticalOptions="Center" />
-        
+            Text="Salary:" />
+        <Entry Placeholder="e.g., $120,000" x:Name="salary" Keyboard="Numeric" />
+
         <Label 
-            Text="Location:"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
-        <Entry Placeholder="Location" x:Name="location" VerticalOptions="Center"  />
-        
+            Text="Location:" />
+        <Entry Placeholder="e.g., Redmond, WA" x:Name="location" />
+
         <Label 
-            Text="Role:"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
-        <Entry Placeholder="Role" x:Name="role" VerticalOptions="Center"  />
-        <Button Text="Add Application"></Button>
+            Text="Role:" />
+        <Entry Placeholder="e.g., Software Engineer" x:Name="role" />
+
+        <!-- FIX IS HERE: Added the Clicked event handler -->
+        <Button Text="Add Application" 
+                Clicked="AddApplicationButtonPressed" 
+                Margin="0,20,0,0"/>
 
     </VerticalStackLayout>
 </ContentPage>
