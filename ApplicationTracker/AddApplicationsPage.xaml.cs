@@ -10,8 +10,6 @@ public partial class AddApplicationsPage : ContentPage
         InitializeComponent();
         
     }
-
-    // 2. Make the event handler async so we can use 'await'.
     private async void AddApplicationButtonPressed(object sender, EventArgs e)
     {
   
@@ -28,7 +26,7 @@ public partial class AddApplicationsPage : ContentPage
         JobApplication jobApplication = new JobApplication
         {
             CompanyName = companyName.Text,
-            Salary = salary.Text,
+            Salary = $"£{salary.Text}",
             Location = location.Text,
             Role = role.Text,
             Status = 0 //default for newly applied

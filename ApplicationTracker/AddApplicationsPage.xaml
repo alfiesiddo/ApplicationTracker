@@ -4,6 +4,14 @@
              x:Class="ApplicationTracker.AddApplicationsPage"
              Title="AddApplicationsPage">
     <VerticalStackLayout Spacing="10" Padding="20">
+
+        <Label Grid.Row="0"
+       Text="Saved Applications"
+       FontSize="Large"
+       FontAttributes="Bold"
+       HorizontalOptions="Center" 
+       Margin="0,0,0,10"/>
+
         <Label 
             Text="Company Name:" />
         <Entry Placeholder="e.g., Microsoft" x:Name="companyName" />
@@ -19,8 +27,7 @@
         <Label 
             Text="Role:" />
         <Entry Placeholder="e.g., Software Engineer" x:Name="role" />
-
-        <!-- FIX IS HERE: Added the Clicked event handler -->
+        
         <Button Text="Add Application" 
                 Clicked="AddApplicationButtonPressed" 
                 Margin="0,20,0,0"/>
