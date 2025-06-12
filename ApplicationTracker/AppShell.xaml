@@ -16,7 +16,7 @@
         </Tab>
 
         <!-- FIXES ARE HERE -->
-        <Tab Title="Add Application" Icon="add.svg">
+        <Tab Title="Add Application" Icon="search.svg">
             <!-- Changed title to be more descriptive -->
             <ShellContent
                 Title="Add Application"
