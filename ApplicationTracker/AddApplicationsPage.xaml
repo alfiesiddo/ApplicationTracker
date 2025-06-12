@@ -2,11 +2,11 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="ApplicationTracker.AddApplicationsPage"
-             Title="AddApplicationsPage">
+             Title="">
     <VerticalStackLayout Spacing="10" Padding="20">
 
         <Label Grid.Row="0"
-       Text="Saved Applications"
+       Text="Add Application"
        FontSize="Large"
        FontAttributes="Bold"
        HorizontalOptions="Center" 
