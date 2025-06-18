@@ -14,11 +14,11 @@
 
         <Label 
             Text="Company Name:" />
-        <Entry Placeholder="e.g., Microsoft" x:Name="companyName" />
+        <Entry Placeholder="e.g. Microsoft" x:Name="companyName" />
 
         <Label 
             Text="Salary:" />
-        <Entry Placeholder="e.g., £120,000" x:Name="salary" Keyboard="Numeric" />
+        <Entry Placeholder="e.g. £120,000" x:Name="salary" Keyboard="Numeric" />
 
         <Label 
             Text="Location:" />
@@ -26,7 +26,7 @@
 
         <Label 
             Text="Role:" />
-        <Entry Placeholder="e.g., Software Engineer" x:Name="role" />
+        <Entry Placeholder="e.g. Software Engineer" x:Name="role" />
         
         <Button Text="Add Application" 
                 Clicked="AddApplicationButtonPressed" 
