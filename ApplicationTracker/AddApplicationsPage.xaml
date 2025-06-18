@@ -18,11 +18,11 @@
 
         <Label 
             Text="Salary:" />
-        <Entry Placeholder="e.g., $120,000" x:Name="salary" Keyboard="Numeric" />
+        <Entry Placeholder="e.g., £120,000" x:Name="salary" Keyboard="Numeric" />
 
         <Label 
             Text="Location:" />
-        <Entry Placeholder="e.g., Redmond, WA" x:Name="location" />
+        <Entry Placeholder="e.g. Manchester" x:Name="location" />
 
         <Label 
             Text="Role:" />
