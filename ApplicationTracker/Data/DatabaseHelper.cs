@@ -26,7 +26,7 @@ namespace ApplicationTracker.Data
         // READ ALL
         public Task<List<JobApplication>> GetJobApplicationsAsync()
         {
-            return _database.Table<JobApplication>().ToListAsync();
+            return _database.Table<JobApplication>().OrderByDescending(j => j.Status).ToListAsync();
         }
 
         // READ ONE
