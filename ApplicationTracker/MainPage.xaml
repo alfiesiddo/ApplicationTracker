@@ -54,6 +54,7 @@
                                             <x:String>Interview</x:String>
                                             <x:String>Offered</x:String>
                                             <x:String>Rejected</x:String>
+                                            <x:String>Been Scouted</x:String>
                                         </x:Array>
                                     </Picker.ItemsSource>
                                 </Picker>

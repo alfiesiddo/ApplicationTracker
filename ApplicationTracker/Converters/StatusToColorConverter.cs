@@ -21,11 +21,13 @@ namespace ApplicationTracker.Converters
                 case 1: // Assessments
                     return Colors.SandyBrown;
                 case 2: // Interviewing
-                    return Colors.Khaki;
+                    return Colors.Yellow;
                 case 3: // Job Offer
                     return Colors.ForestGreen;
                 case 4: // Rejected
                     return Colors.IndianRed;
+                case 5:
+                    return Colors.Aqua;
                 default:
                     return Colors.Transparent; // Default/fallback color
             }
