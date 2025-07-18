@@ -24,10 +24,10 @@ namespace ApplicationTracker.Converters
                     return Colors.Yellow;
                 case 3: // Job Offer
                     return Colors.ForestGreen;
-                case 4: // Rejected
-                    return Colors.IndianRed;
-                case 5:
+                case 4:
                     return Colors.Aqua;
+                case 5: // Rejected
+                    return Colors.IndianRed;
                 default:
                     return Colors.Transparent; // Default/fallback color
             }
