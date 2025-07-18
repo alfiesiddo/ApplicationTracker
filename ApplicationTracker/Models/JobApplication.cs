@@ -32,6 +32,8 @@ namespace ApplicationTracker.Data
                 OnPropertyChanged(); // This will trigger the BackgroundColor binding to re-evaluate
             }
         }
+
+        public string RoleWithCompany => $"{Role} at {CompanyName}";
         protected void OnPropertyChanged([CallerMemberName] string propertyName = null)
         {
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
