@@ -46,5 +46,15 @@ namespace ApplicationTracker.Data
         {
             return _database.DeleteAsync(job);
         }
+
+        public Task<int> GetTotalApplicationCount()
+        {
+            return _database.Table<JobApplication>().CountAsync();
+        }
+
+        public Task<int> GetTotalRejectionCount()
+        {
+            return _database.Table<JobApplication>().Where(app => app.Status == 5).CountAsync();
+        }
     }
 }
