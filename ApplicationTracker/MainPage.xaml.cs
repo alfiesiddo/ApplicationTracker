@@ -21,6 +21,12 @@ namespace ApplicationTracker
         {
             base.OnAppearing();
             await LoadApplications();
+
+            int total = await database.GetTotalApplicationCount();
+            int rejected = await database.GetTotalRejectionCount();
+
+            TotalCountLabel.Text = total.ToString();
+            RejectedCountLabel.Text = rejected.ToString();
         }
 
         private async Task LoadApplications()

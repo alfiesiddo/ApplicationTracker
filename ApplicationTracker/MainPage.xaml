@@ -13,7 +13,12 @@
     <Grid RowDefinitions="Auto, *" Padding="10">
 
         <Label Grid.Row="0" Text="Saved Applications" FontSize="Large" FontAttributes="Bold" HorizontalOptions="Center" Margin="0,10,0,10"/>
-
+        
+        <HorizontalStackLayout Grid.Row="1" Spacing="20" HorizontalOptions="Center">
+            <Label x:Name="TotalCountLabel" FontSize="Medium" FontAttributes="Bold"/>
+            <Label x:Name="RejectedCountLabel" FontSize="Medium" FontAttributes="Bold" TextColor="Red"/>
+        </HorizontalStackLayout>
+        
         <CollectionView Grid.Row="1" ItemsSource="{Binding JobApplications}" SelectionMode="None">
 
             <CollectionView.EmptyView>
