@@ -16,12 +16,13 @@ namespace ApplicationTracker.Data
         [PrimaryKey, AutoIncrement] //saves me the hassle of having to add code to increase id num with each drink.
         public int ID { get; set; }
         public string Role { get; set; }
-
+        private DateTime AppliedDate { get; set; } = DateTime.Now.Date;
         public string Salary { get; set; }
         public string CompanyName { get; set; }
         public string Location { get; set; }
 
         private int _status;
+
         public int Status
         {
             get => _status;
@@ -33,6 +34,7 @@ namespace ApplicationTracker.Data
             }
         }
 
+        public string ApplicationDate => $"Applied: {AppliedDate}";
         public string RoleWithCompany => $"{Role} at {CompanyName}";
         protected void OnPropertyChanged([CallerMemberName] string propertyName = null)
         {
