@@ -48,9 +48,10 @@
                             <Label Grid.Row="0" Grid.ColumnSpan="2" FontSize="Large" FontAttributes="Bold" Text="{Binding RoleWithCompany}"/>
                             <Label Grid.Row="1" Grid.ColumnSpan="2" Text="{Binding Location}" FontAttributes="Italic" />
                             <Label Grid.Row="2" Grid.ColumnSpan="2" Text="{Binding Salary}" TextColor="Green" />
+                            <Label Grid.Row="3"  Grid.ColumnSpan="2" Text="{Binding ApplicationDate}"/>
 
                             <!-- Interactive Controls -->
-                            <HorizontalStackLayout Grid.Row="3" Grid.ColumnSpan="2" Spacing="10" HorizontalOptions="End">
+                            <HorizontalStackLayout Grid.Row="4" Grid.ColumnSpan="2" Spacing="10" HorizontalOptions="End">
                                 <Picker Title="Status"
                                         SelectedIndex="{Binding Status}"
                                         SelectedIndexChanged="StatusPicker_SelectedIndexChanged"
