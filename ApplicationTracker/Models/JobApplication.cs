@@ -16,7 +16,7 @@ namespace ApplicationTracker.Data
         [PrimaryKey, AutoIncrement] //saves me the hassle of having to add code to increase id num with each drink.
         public int ID { get; set; }
         public string Role { get; set; }
-        private DateTime AppliedDate { get; set; } = DateTime.Now;
+        public DateTime AppliedDate { get; set; } = DateTime.Now;
         public string Salary { get; set; }
         public string CompanyName { get; set; }
         public string Location { get; set; }
